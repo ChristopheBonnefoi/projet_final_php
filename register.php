@@ -98,15 +98,13 @@ if(
     if(isset($errors)){
         foreach($errors as $error){
 
-            echo '<div class="alert alert-danger" role="alert">'
-            . $error .
-          '</div>';
+            echo '<div class="alert alert-danger" role="alert">'. htmlspecialchars($error) .'</div>';
          }
         }
 
         if(isset($success)){
 
-            echo '<div class="alert alert-success" role="alert">' . $success . '</div>';
+            echo '<div class="alert alert-success" role="alert">' . htmlspecialchars($success) . '</div>';
         }else{
         ?>
 
