@@ -1,5 +1,7 @@
 <?php
+session_start();
 require 'recaptchaValid.php';
+
 
 if(
     // appelle des variable

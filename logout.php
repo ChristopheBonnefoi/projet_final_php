@@ -1,4 +1,12 @@
-<?php session_start(); ?>
+<?php 
+    session_start();
+
+
+    unset($_SESSION['user']);
+
+?>
+
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -6,26 +14,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Accueil - Wikifruit</title>
+    <title>Connexion - Wikifruit</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <body>
+
 <?php include "include/menu.php" ?>
 
+
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-12 col-md-8 mx-auto py-5">
 
-            <h1 class="pb-4">Acceuil Wikifruit</h1>
+        <div class="row">
 
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum eligendi ab, ipsa inventore nesciunt dolorem veniam ea quia perspiciatis sunt in mollitia, dicta voluptatum voluptas rerum ipsum deserunt magni ullam ratione consectetur repudiandae aspernatur. Beatae iure dicta repellat cupiditate unde, veniam accusantium asperiores rerum reiciendis vel temporibus iste! Rem, fugiat?</p>
+            <div class="col-12 col-md-8 offset-md-2 py-5">
+                <h1 class="pb-4 text-center">Déconnexion</h1>
+                <p class="alert alert-success text-center">Vous avez bien été déconnecté !</p>
+            </div>
+
         </div>
-    </div>
+
 </div>
+
 
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
