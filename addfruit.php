@@ -77,6 +77,8 @@ if(
 
     if(!isset($errors)){
 
+        $success = "Le fruit a bien été créé !";
+
 
         if($fileErrorCode == 0){
 
@@ -152,6 +154,12 @@ if(
                         echo '<div class="alert alert-danger" role="alert">'. htmlspecialchars($error) .'</div>';
                     }
                 }
+
+                if(isset($success)){
+
+                    echo '<div class="alert alert-success" role="alert">' . htmlspecialchars($success) . '</div>';
+                }else{
+
             ?>
             <form action="addfruit.php" method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
@@ -162,13 +170,10 @@ if(
                     <label for="origin" class="form-label">Pays d'origine <span class="text-danger">*</span></label>
                     <select id="origin" name="origin" class="form-select">
                         <option selected disabled>Sélectionner un pays</option>
-                        <?php
-
+                         <?php
                         foreach($countriesList as $key => $country){
                             echo '<option value="' . $key . '">' . ucfirst($country) . '</option>';
-                        }
-
-                        ?>
+                        }?>
                     </select>
                 </div>
                 <input type="hidden" name="MAX_FILE_SIZE" value=$maxFileSize>
@@ -187,7 +192,7 @@ if(
                 <p class="text-danger mt-4">* Champs obligatoires</p>
 
             </form>
-
+        <?php } ?>
         </div>
     </div>
 
